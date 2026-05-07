@@ -1,6 +1,8 @@
 import { motion, useScroll, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronRight, Menu, X, Star, Instagram, Linkedin, Twitter, Facebook, Mail, Phone, MapPin, ChevronDown } from "lucide-react";
+import logoWhite from "./assets/logo-white.png";
+import logoBlack from "./assets/logo-black.png";
 
 // --- Components ---
 
@@ -165,9 +167,7 @@ const Navbar = () => {
       </div>
       
       <div className="flex-shrink-0 text-center">
-        <h1 className={`font-serif text-xl md:text-3xl tracking-tight transition-colors ${isScrolled ? 'text-luxury-charcoal' : 'text-white'}`}>
-          ETHEREAL <span className="italic font-light">Celebrare</span>
-        </h1>
+        <img src={isScrolled ? logoBlack : logoWhite} alt="TED Logo" className="h-10 md:h-14 w-auto object-contain transition-all duration-900" />
       </div>
 
       <div className="flex-1 flex justify-end items-center gap-8">
@@ -652,7 +652,7 @@ const InquirySection = () => {
           </div>
           <div className="flex flex-col gap-4 group">
             <label className="text-[9px] uppercase tracking-widest font-black text-luxury-gold px-1">Identity (Email)</label>
-            <input type="email" placeholder="private@residence.com" className="bg-white/5 border-b border-white/10 focus:border-luxury-gold outline-none p-4 font-serif text-xl transition-all duration-500 placeholder:text-white/30 text-white" />
+            <input type="email" placeholder="private@gmail.com" className="bg-white/5 border-b border-white/10 focus:border-luxury-gold outline-none p-4 font-serif text-xl transition-all duration-500 placeholder:text-white/30 text-white" />
           </div>
           <div className="flex flex-col gap-4 group">
             <label className="text-[9px] uppercase tracking-widest font-black text-luxury-gold px-1">Desired Coastline</label>
@@ -694,7 +694,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="flex flex-col gap-8">
             <div className="group cursor-pointer">
-              <h2 className="font-serif text-3xl text-white tracking-widest mb-2 transition-colors group-hover:text-luxury-gold">ETHEREAL <span className="italic font-light text-white/70">Celebrare</span></h2>
+              <img src={logoWhite} alt="TED Logo" className="h-10 md:h-14 w-auto object-contain mb-8 " />
               <span className="text-[8px] uppercase tracking-[0.5em] font-extrabold text-white/40 block">Global Prestige Wedding Architecture</span>
             </div>
             <p className="text-sm font-light leading-relaxed max-w-xs italic text-white/30">
@@ -713,7 +713,7 @@ const Footer = () => {
             <h4 className="text-luxury-gold uppercase tracking-[0.3em] text-[9px] font-black underline underline-offset-8 mb-2">Connect Directly</h4>
             <div className="flex flex-col gap-4">
               <a href="mailto:concierge@etherealcelebrare.com" className="flex items-center gap-4 text-xs font-medium text-white/70 hover:text-luxury-gold transition-colors">
-                <Mail size={14} className="text-luxury-gold/50" /> concierge@etherealcelebrare.com
+                <Mail size={14} className="text-luxury-gold/50" /> concierge@theeventdesigner.com
               </a>
               <div className="grid grid-cols-1 gap-4 mt-2">
                 <div className="flex flex-col gap-2">
